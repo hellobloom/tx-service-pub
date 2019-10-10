@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -f /app/.env.sample && ! -f /app/.env ]]; then 
+  cp /app/.env.sample /app/.env
+fi 
+
+# if [ -f /app/.env ]; then
+  # sed -i '/UNNECESSARY_KEY/d' /app/.env
+# fi

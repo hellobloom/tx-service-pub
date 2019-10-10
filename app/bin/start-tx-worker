@@ -1,0 +1,3 @@
+#!/bin/bash
+
+node -r ./tsconfig-paths.js ./build/tx_worker/index.js

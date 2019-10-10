@@ -1,0 +1,37 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+node_modules
+
+# testing
+/coverage
+/test/reports
+
+# production
+/build
+build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.ssh
+supervisord.dev.conf
+
+npm-debug.log*
+.npmrc
+yarn-debug.log*
+yarn-error.log*
+selenium-debug.log
+dump.rdb
+
+.node-xmlhttprequest-sync-*
+
+#vim
+*.swp
+*.swo
+*~

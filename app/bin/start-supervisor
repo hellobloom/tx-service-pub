@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Current node env: $NODE_ENV"
+bin/migrate
+/usr/local/bin/supervisord -n -c /etc/supervisord.conf

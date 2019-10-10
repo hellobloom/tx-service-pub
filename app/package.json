@@ -1,0 +1,190 @@
+{
+  "name": "tx-service-pub",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "^8.9.4"
+  },
+  "dependencies": {
+    "@bloomprotocol/attestations-lib": "^3.0.5",
+    "@sentry/browser": "^4.5.3",
+    "@sentry/node": "^4.5.3",
+    "@sentry/types": "^4.5.3",
+    "@types/async": "^2.4.0",
+    "@types/bignumber.js": "^4.0.3",
+    "@types/chalk": "^2.2.0",
+    "@types/common-tags": "^1.8.0",
+    "@types/compression": "^0.0.36",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.1",
+    "@types/helmet": "^0.0.37",
+    "@types/jest": "^21.1.10",
+    "@types/jquery": "^3.3.29",
+    "@types/kue": "^0.11.10",
+    "@types/lodash": "^4.14.120",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.12.21",
+    "@types/node-fetch": "^2.1.4",
+    "@types/ramda": "^0.24.17",
+    "@types/react-syntax-highlighter": "^0.0.5",
+    "@types/supertest": "^2.0.7",
+    "@types/underscore": "^1.8.9",
+    "@types/urijs": "^1.15.38",
+    "@types/winston": "^2.4.4",
+    "async": "^2.6.1",
+    "axios": "^0.19.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "bignumber.js": "^5.0.0",
+    "bn.js": "^4.11.8",
+    "body-parser": "^1.18.3",
+    "case": "^1.6.1",
+    "chalk": "^2.4.2",
+    "common-tags": "^1.8.0",
+    "compression": "^1.7.3",
+    "customerio-node": "^0.4.0",
+    "date-fns": "^1.30.1",
+    "deepcopy": "^1.0.1",
+    "enzyme-to-json": "^3.3.5",
+    "eth-sig-util": "^2.1.1",
+    "ethereumjs-util": "^5.2.0",
+    "ethereumjs-wallet": "^0.6.3",
+    "express": "^4.16.4",
+    "fs-extra": "3.0.1",
+    "helmet": "^3.21.1",
+    "http": "^0.0.0",
+    "husky": "^0.14.3",
+    "jest": "20.0.4",
+    "kue": "^0.11.6",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
+    "node-vault": "^0.9.10",
+    "pg": "6.4.2",
+    "pg-boss": "^3.1.4",
+    "prerender-node": "^3.2.1",
+    "prettier": "^1.16.4",
+    "promise": "8.0.1",
+    "ramda": "^0.25.0",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^4.44.3",
+    "sequelize-cli": "^3.2.0",
+    "sequelize-typescript": "^0.6.7",
+    "solc": "0.4.23",
+    "supertest": "^3.4.2",
+    "truffle": "^4.1.15",
+    "truffle-contract": "^3.0.7",
+    "truffle-hdwallet-provider": "^0.0.3",
+    "truffle-typings": "^1.0.6",
+    "ts-jest": "^22.4.6",
+    "typescript": "^3.5.1",
+    "underscore": "^1.9.1",
+    "urijs": "^1.19.1",
+    "uuidv4": "^1.0.1",
+    "web3-provider-engine": "^13.8.0",
+    "web3-shh": "^1.0.0-beta.41",
+    "web3-utils": "^1.0.0-beta.41",
+    "winston": "^2.4.4"
+  },
+  "proxy": "http://localhost:5000",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "preinstall": "./bin/preinstall",
+    "start:dev": "./bin/start-dev",
+    "heroku-postbuild": "npm run build",
+    "start": "./bin/start-prod",
+    "build": "./bin/build",
+    "build-contracts": "./bin/compile-contracts",
+    "build-client": "./bin/build-client",
+    "build-server": "./bin/build-server",
+    "test": "./bin/test",
+    "storybook": "start-storybook -p 6006 -c client/.storybook",
+    "build-storybook": "build-storybook -c client/.storybook"
+  },
+  "devDependencies": {
+    "@types/mini-css-extract-plugin": "^0.2.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "enzyme": "^3.8.0",
+    "escape-string-regexp": "^1.0.5",
+    "express-request-mock": "^2.0.2",
+    "ganache-cli": "^6.3.0",
+    "http-proxy-middleware": "^0.18.0",
+    "identity-obj-proxy": "^3.0.0",
+    "ipfs-mini": "^1.1.5",
+    "jest-diff": "^22.4.3",
+    "koa-connect": "^2.0.1",
+    "mini-css-extract-plugin": "^0.4.5",
+    "nodemon": "^1.18.9",
+    "ts-loader": "3.2.0",
+    "ts-node": "^6.2.0",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "^5.12.1",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "tslint-no-focused-test": "^0.1.2",
+    "tslint-react": "^3.6.0",
+    "web3-fake-provider": "^0.1.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "api/**/*.{js,jsx,ts,tsx}",
+      "worker/**/*.{js,jsx,ts,tsx}",
+      "gas_worker/**/*.{js,jsx,ts,tsx}",
+      "tx_worker/**/*.{js,jsx,ts,tsx}",
+      "shared/**/*.{js,jsx,ts,tsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/test/delayedJobSetup.ts",
+      "<rootDir>/test/loggerSetup.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/api/**/?(*.)test.ts?(x)",
+      "<rootDir>/worker/**/?(*.)test.ts?(x)",
+      "<rootDir>/gas_worker/**/?(*.)test.ts?(x)",
+      "<rootDir>/tx_worker/**/?(*.)test.ts?(x)",
+      "<rootDir>/shared/**/?(*.)test.ts?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/bin/testjs/typescriptTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/bin/testjs/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
+    ],
+    "moduleNameMapper": {
+      "@api/(.*)": "<rootDir>/api/src/$1",
+      "@worker/(.*)": "<rootDir>/worker/$1",
+      "@gas_worker/(.*)": "<rootDir>/gas_worker/$1",
+      "@tx_worker/(.*)": "<rootDir>/tx_worker/$1",
+      "@shared/(.*)": "<rootDir>/shared/$1",
+      "@typings/(.*)": "<rootDir>/typings/$1",
+      "@test/(.*)": "<rootDir>/test/$1"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.test.json"
+      }
+    }
+  },
+  "babel": {
+    "presets": []
+  },
+  "license": "UNLICENSED"
+}

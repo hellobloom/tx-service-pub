@@ -1,0 +1,454 @@
+{
+  "contractName": "BatchAttestationLogic",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "rootHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "BatchTraitAttested",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_dataHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "batchAttest",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060e48061001f6000396000f3fe6080604052348015600f57600080fd5b50600436106045576000357c01000000000000000000000000000000000000000000000000000000009004806396e2f52714604a575b600080fd5b607360048036036020811015605e57600080fd5b81019080803590602001909291905050506075565b005b7f98c2fa8d4d3dc0adc2a18053472e229b4f2881b6713de92d03954dffce6b0e08816040518082815260200191505060405180910390a15056fea265627a7a723058200dd1786347a6dfe92a32b277016a539b523be44de56afc9c7284b62b63b9a35164736f6c63430005090032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b50600436106045576000357c01000000000000000000000000000000000000000000000000000000009004806396e2f52714604a575b600080fd5b607360048036036020811015605e57600080fd5b81019080803590602001909291905050506075565b005b7f98c2fa8d4d3dc0adc2a18053472e229b4f2881b6713de92d03954dffce6b0e08816040518082815260200191505060405180910390a15056fea265627a7a723058200dd1786347a6dfe92a32b277016a539b523be44de56afc9c7284b62b63b9a35164736f6c63430005090032",
+  "sourceMap": "168:353:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;168:353:4;;;;;;;",
+  "deployedSourceMap": "168:353:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;168:353:4;;;;;;;;;;;;;;;;;;;;417:102;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;417:102:4;;;;;;;;;;;;;;;;;:::i;:::-;;;485:29;504:9;485:29;;;;;;;;;;;;;;;;;;417:102;:::o",
+  "source": "pragma solidity 0.5.9;\n\n/**\n * @title BatchAttestationLogic\n * @notice AttestationLogic allows users to submit the root hash of a batch\n *  attestation Merkle tree\n */\ncontract BatchAttestationLogic {\n  event BatchTraitAttested(\n    bytes32 rootHash\n    );\n\n  /**\n   * @notice Function for anyone to submit the root hash of a batch attestation merkle tree\n   * @param _dataHash Root hash of batch merkle tree\n   */\n  function batchAttest(\n    bytes32 _dataHash\n  ) external {\n    emit BatchTraitAttested(_dataHash);\n  }\n}",
+  "sourcePath": "/Users/isaacpatka/Bloom/Repos/core/contracts/BatchAttestationLogic.sol",
+  "ast": {
+    "absolutePath": "/Users/isaacpatka/Bloom/Repos/core/contracts/BatchAttestationLogic.sol",
+    "exportedSymbols": {
+      "BatchAttestationLogic": [
+        1093
+      ]
+    },
+    "id": 1094,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1078,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title BatchAttestationLogic\n@notice AttestationLogic allows users to submit the root hash of a batch\n attestation Merkle tree",
+        "fullyImplemented": true,
+        "id": 1093,
+        "linearizedBaseContracts": [
+          1093
+        ],
+        "name": "BatchAttestationLogic",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1082,
+            "name": "BatchTraitAttested",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1080,
+                  "indexed": false,
+                  "name": "rootHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1082,
+                  "src": "233:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1079,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:28:4"
+            },
+            "src": "203:53:4"
+          },
+          {
+            "body": {
+              "id": 1091,
+              "nodeType": "Block",
+              "src": "474:45:4",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1088,
+                        "name": "_dataHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1084,
+                        "src": "504:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 1087,
+                      "name": "BatchTraitAttested",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1082,
+                      "src": "485:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32)"
+                      }
+                    },
+                    "id": 1089,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "485:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1090,
+                  "nodeType": "EmitStatement",
+                  "src": "480:34:4"
+                }
+              ]
+            },
+            "documentation": "@notice Function for anyone to submit the root hash of a batch attestation merkle tree\n@param _dataHash Root hash of batch merkle tree",
+            "id": 1092,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchAttest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1084,
+                  "name": "_dataHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1092,
+                  "src": "443:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1083,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "443:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "437:27:4"
+            },
+            "returnParameters": {
+              "id": 1086,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "474:0:4"
+            },
+            "scope": 1093,
+            "src": "417:102:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1094,
+        "src": "168:353:4"
+      }
+    ],
+    "src": "0:521:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/isaacpatka/Bloom/Repos/core/contracts/BatchAttestationLogic.sol",
+    "exportedSymbols": {
+      "BatchAttestationLogic": [
+        1093
+      ]
+    },
+    "id": 1094,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1078,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title BatchAttestationLogic\n@notice AttestationLogic allows users to submit the root hash of a batch\n attestation Merkle tree",
+        "fullyImplemented": true,
+        "id": 1093,
+        "linearizedBaseContracts": [
+          1093
+        ],
+        "name": "BatchAttestationLogic",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 1082,
+            "name": "BatchTraitAttested",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1080,
+                  "indexed": false,
+                  "name": "rootHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1082,
+                  "src": "233:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1079,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:28:4"
+            },
+            "src": "203:53:4"
+          },
+          {
+            "body": {
+              "id": 1091,
+              "nodeType": "Block",
+              "src": "474:45:4",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1088,
+                        "name": "_dataHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1084,
+                        "src": "504:9:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 1087,
+                      "name": "BatchTraitAttested",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1082,
+                      "src": "485:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32)"
+                      }
+                    },
+                    "id": 1089,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "485:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1090,
+                  "nodeType": "EmitStatement",
+                  "src": "480:34:4"
+                }
+              ]
+            },
+            "documentation": "@notice Function for anyone to submit the root hash of a batch attestation merkle tree\n@param _dataHash Root hash of batch merkle tree",
+            "id": 1092,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "batchAttest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1085,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1084,
+                  "name": "_dataHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1092,
+                  "src": "443:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1083,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "443:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "437:27:4"
+            },
+            "returnParameters": {
+              "id": 1086,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "474:0:4"
+            },
+            "scope": 1093,
+            "src": "417:102:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1094,
+        "src": "168:353:4"
+      }
+    ],
+    "src": "0:521:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.9+commit.e560f70d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.5",
+  "updatedAt": "2019-05-30T21:03:45.685Z",
+  "devdoc": {
+    "methods": {
+      "batchAttest(bytes32)": {
+        "params": {
+          "_dataHash": "Root hash of batch merkle tree"
+        }
+      }
+    },
+    "title": "BatchAttestationLogic"
+  },
+  "userdoc": {
+    "methods": {
+      "batchAttest(bytes32)": {
+        "notice": "Function for anyone to submit the root hash of a batch attestation merkle tree"
+      }
+    },
+    "notice": "AttestationLogic allows users to submit the root hash of a batch attestation Merkle tree"
+  }
+}
